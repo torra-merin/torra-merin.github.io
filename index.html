@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martí Torra Merín</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<script>
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(cname) === 0) {
+                    return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function toggleLanguage(lang) {
+            setCookie('language', lang, 30);  // Save the language preference in a cookie for 30 days
+            if (lang === 'en') {
+                document.getElementById('content_en').style.display = 'block';
+                document.getElementById('content_ca').style.display = 'none';
+            } else if (lang === 'ca') {
+                document.getElementById('content_en').style.display = 'none';
+                document.getElementById('content_ca').style.display = 'block';
+            }
+        }
+
+        function checkLanguagePreference() {
+            const lang = getCookie('language');
+            if (lang) {
+                toggleLanguage(lang);
+            } else {
+                // Default to English if no cookie is set
+                toggleLanguage('en');
+            }
+        }
+
+        window.onload = checkLanguagePreference;
+    </script>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+		margin: 0px;
+        }
+        h1 {
+            color: #4682b4;
+		padding-top: 10px;
+        }
+
+	  h3 {
+    		color: #4682b4;
+    		font-style: italic;
+    		font-size: 20px;
+		padding-bottom: 10px;
+	  }
+
+	  h2 {
+    		color: #4682b4;
+    		font-size: 22px;
+		padding-bottom: 10px;
+	  }
+        .content1 {
+            width: 80%;
+            margin: auto;
+            border: 2px solid #4682b4;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        .content {
+            width: 80%;
+            margin: auto;
+            border: 2px solid #4682b4;
+            border-top: none;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+	  .content p{
+		max-width: 600px;
+    		padding-bottom: 20px;
+    		margin: auto;
+	  }
+
+	  .content1 p{
+		max-width: 600px;
+    		padding-bottom: 20px;
+    		margin: auto;
+	  }
+
+	  .pub-cites{
+		text-align: justify;
+    		padding-bottom: 20px;
+
+	 }
+
+	  .pub-cites p{
+    		text-indent: -2em;
+    		padding-left: 2em;
+	 }
+
+        .menu {
+   		background-color: #87ceeb;
+    		padding: 10px 0px;
+    		border: 2px solid #4682b4;
+    		margin-bottom: 20px;
+
+        }
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000080;
+        }
+
+        .lang-menu {
+    		padding: 10px 0px;
+    		margin-bottom: 20px;
+		text-align: end;
+
+        }
+        .lang-menu a {
+            margin: 0 7px;
+            text-decoration: none;
+            color: #000080;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #87ceeb;
+            border-top: 2px solid #4682b4;
+        }
+
+	  li {
+		width: 300px;
+    		margin: auto;
+    		list-style: circle;
+		text-align: justify;
+    		text-indent: -2em;
+    		padding-left: 2em;
+	  }
+
+	  img{
+    		max-width: 200px;
+    		padding-bottom: 20px;
+	  }
+
+    </style>
+</head>
+<body>
+
+    <div class="lang-menu">
+        <a href="#" onclick="toggleLanguage('en')">English</a>
+        <a href="#" onclick="toggleLanguage('ca')">Català</a>
+    </div>
+
+
+<!-- INICI ENGLISH SECTION -->
+
+<section id="content_en">
+    <h1>Martí Torra-Merin</h1>
+    <h3>Social Anthropologist</h3>
+    
+    <div class="menu">
+        <a href="#about">About Me</a>
+        <a href="#outreach">Outreach</a>      
+	  <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="content1" id="about">
+        <h2>About Me</h2>
+<p>I am a PhD researcher in the Social Anthropology Department at the University of Barcelona (UB). My recent work focuses on children’s agency and its interplay with secrecy within the fields of Folk Culture and Sexuality Education. I am a member of the Catalan Institute of Anthropology and the GENI Research Group at UB.</p>
+        
+<img alt="picture" src="marti.png"></img>  
+
+</div>
+    
+    <div class="content" id="outreach">
+        <h2>Outreach</h2>
+        <p>Here are some of my collaborations:</p>
+<div class="pub-cites">
+            <p>Camprubí, L. (2023) Contijoch i Torra: “La festa, si està viva, desborda els protocols”. Tornaveu.cat. <a href="https://www.tornaveu.cat/entrevista/contijoch-i-torra-la-festa-si-esta-viva-desborda-els-protocols-34371/">Content available online</a>.</p>
+            <p>Badalona Tres60 (2021) Eines per parlar de sexualitat amb infants de 9 a 12 anys. Badalona Comunicació. <a href="https://youtu.be/wLzrp2QDO7A">Content available online</a>.</p>
+		<p>Torra Merín, Martí; Rallo Arnau, Marta; Gómez León, Antonué (2021) La màgia dels Reis d'Orient. Revista Sió 683: 39-41. <a href="http://www.revistasio.cat/sio683/sio683.pdf">Content available online</a>.</p>
+</div>
+    </div>
+
+    <div class="content" id="publications">
+        <h2>Publications</h2>
+        <p>Here are some of my publications:</p>
+<div class="pub-cites">
+            <p>Torra-Merin, M. (2023) Ressenya: El amanecer de todo. Una nueva historia de la humanidad. Revista d'Etnologia de Catalunya, 47:229-231. <a href="https://doi.org/10.57645/10.8080.06.20">https://doi.org/10.57645/10.8080.06.20</a></p>
+            <p>Torra-Merin, M. (2023) The hidden power of children in Christmas traditions: Unveiling the role of secrecy and agency. Anthropology Today, 39: 3-5. <a href="https://doi.org/10.1111/1467-8322.12845">https://doi.org/10.1111/1467-8322.12845</a></p>
+</div>
+        <p>You can check out my complete publication list on <a href="https://orcid.org/0000-0001-5568-3724">ORCID</a>.</p>
+    </div>
+    
+    <div class="content" id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at: <a href="m.torra@ub.edu">m.torra@ub.edu</a> / <a href="marti.torra@natana.cat">marti.torra@natana.cat</a></p>        
+	  <p>ORCID ID: <a href="https://orcid.org/0000-0001-5568-3724">0000-0001-5568-3724</a></p>	  
+    </div>
+    
+</section>
+
+<!-- FI ENGLISH SECTION -->
+
+
+<!-- INICI CATALÀ SECTION -->
+
+<section id="content_ca" style="display: none;">
+    <h1>Martí Torra Merín</h1>
+    <h3>Antropòleg Social</h3>
+    
+    <div class="menu">
+        <a href="#sobre">Sobre mi</a>
+        <a href="#divulgació">Divulgació</a>        
+	  <a href="#publicacions">Publicacions</a>
+        <a href="#contacte">Contacte</a>
+    </div>
+    
+    <div class="content1" id="sobre">
+        <h2>Sobre mi</h2>
+<p>Investigador doctoral al Departament d'Antropologia Social de la Universitat de Barcelona. Els meus últims treballs es centren en l'agència infantil i la seva interacció amb el secret en els camps de la cultura popular i de l'Educació Afectivosexual. Sóc membre de l'Institut Català d'Antropologia, i del Grup de Recerca GENI de la UB.</p>
+        
+<img alt="picture" src="marti.png"></img>  
+
+</div>
+   
+    <div class="content" id="divulgació">
+        <h2>Divulgació</h2>
+        <p>Algunes de les meves col·laboracions:</p>
+<div class="pub-cites">
+            <p>Camprubí, L. (2023) Contijoch i Torra: “La festa, si està viva, desborda els protocols”. Tornaveu.cat. <a href="https://www.tornaveu.cat/entrevista/contijoch-i-torra-la-festa-si-esta-viva-desborda-els-protocols-34371/">Contingut disponible online</a>.</p>
+            <p>Badalona Tres60 (2021) Eines per parlar de sexualitat amb infants de 9 a 12 anys. Badalona Comunicació. <a href="https://youtu.be/wLzrp2QDO7A">Contingut disponible online</a>.</p>
+		<p>Torra Merín, Martí; Rallo Arnau, Marta; Gómez León, Antonué (2021) La màgia dels Reis d'Orient. Revista Sió 683: 39-41. <a href="http://www.revistasio.cat/sio683/sio683.pdf">Contingut disponible online</a>.</p>
+</div>
+    </div>
+
+    <div class="content" id="publicacions">
+        <h2>Publicacions</h2>
+        <p>Algunes de les meves publicacions:</p>
+<div class="pub-cites">
+            <p>Torra-Merin, M. (2023) Ressenya: El amanecer de todo. Una nueva historia de la humanidad. Revista d'Etnologia de Catalunya, 47:229-231. <a href="https://doi.org/10.57645/10.8080.06.20">https://doi.org/10.57645/10.8080.06.20</a></p>
+            <p>Torra-Merin, M. (2023) The hidden power of children in Christmas traditions: Unveiling the role of secrecy and agency. Anthropology Today, 39: 3-5. <a href="https://doi.org/10.1111/1467-8322.12845">https://doi.org/10.1111/1467-8322.12845</a></p>
+</div>
+        <p>Pots seguir la llista completa de les meves publicacions a <a href="https://orcid.org/0000-0001-5568-3724">ORCID</a>.</p>
+    </div>
+    
+    <div class="content" id="contacte">
+        <h2>Contacte</h2>
+        <p>Em podràs trobar a: <a href="m.torra@ub.edu">m.torra@ub.edu</a> / <a href="marti.torra@natana.cat">marti.torra@natana.cat</a></p>        
+	  <p>ORCID ID: <a href="https://orcid.org/0000-0001-5568-3724">0000-0001-5568-3724</a></p>	  
+    </div>
+
+</section>
+
+
+<!-- FI CATALÀ SECTION -->
+
+    <div class="footer">
+        <p xmlns:cc="http://creativecommons.org/ns#" >Except noted otherwise, this site and its content are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a></p>
+    </div>
+
+
+</body>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('a:not(.menu a):not(.lang-menu a)');
+    links.forEach(function(link) {
+        link.setAttribute('target', '_blank');
+    });
+});
+    </script>
+
+
+
+</html>
